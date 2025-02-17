@@ -1,0 +1,59 @@
+POST http://localhost:4000/signup
+Content-Type: application/json
+
+{
+    "name": "rahul",
+    "email": "rahul123@gmail.com",
+    "password": "rahul123@",
+    "created_at": "2025-02-14"
+}
+
+###
+GET http://localhost:4000/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzM5Nzc3NDgxfQ.8qF244U8xMF0PNDjsHTGp357zAy4HiLEVKb4A1C-QwY
+
+###
+
+POST  http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "name": "rahul",
+    "password": "rahul123@"
+}
+
+###
+POST http://localhost:4000/expenses
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzM5Nzc3NDgxfQ.8qF244U8xMF0PNDjsHTGp357zAy4HiLEVKb4A1C-QwY
+
+{
+    "title": "market",
+    "amount": 500,
+    "category":"FOOD",
+    "date": "2025-02-15",
+    "payment_method": "Cash"
+}
+
+###
+
+GET http://localhost:4000/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzM5Nzc3NDgxfQ.8qF244U8xMF0PNDjsHTGp357zAy4HiLEVKb4A1C-QwY
+###
+
+PUT http://localhost:4000/expenses/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzM5Nzc3NDgxfQ.8qF244U8xMF0PNDjsHTGp357zAy4HiLEVKb4A1C-QwY
+
+{
+    "title": "Chicken",
+    "amount": 500,
+    "category": "FOOD",
+    "date": "2024-02-15",
+    "payment_method": "online"
+}
+
+###
+
+DELETE http://localhost:4000/expenses/15
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN1bm55IiwiaWF0IjoxNzM5NjEzOTQ0fQ.sXAFyvGY4XCLlqY54i2arA0sSALsNd_35jESAO8KZCo
